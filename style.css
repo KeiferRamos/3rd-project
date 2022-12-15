@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins';
+    background-image: url(black1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: .1fr .25fr 1fr 1fr 1fr .1fr;
+    grid-template-areas: ". . . " ". c1 ." ". c2 ." ". c3 ." ". c4 ." ". . .";
+    grid-gap: 10px;
+}
+
+.content1{
+    grid-area: c1;
+    border-radius: 20px;
+    border: 3px solid black;
+    border-radius: 3px;
+    display: grid;
+    grid-template-columns: 2fr 1fr .2fr .2fr .2fr .2fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "main searchbox hammer addfriend settings homepage";
+    grid-gap: 5px;
+    padding: 10px;
+    background-image: url(black2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.searchbox{
+    grid-area: searchbox;
+    border-radius: 5px;
+    font-size: 25px;
+    color: black;
+    border: 2px solid white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: transparent;
+}
+
+.search{
+   margin-left: 5px;
+   font-weight: bolder;
+   color: white;
+   z-index: 2;
+   position: absolute;
+}
+
+.type{
+    width: 100%;
+    height: 90%;
+    text-align: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+    z-index: 1;
+}
+
+.division{
+    grid-area: addfriend;
+    border-radius: 50%;
+    place-items: center;
+    display: grid;
+    font-size: 25px;
+    color: white;
+    border: 2px solid white;
+}
+
+.division:hover{
+    background:white;
+    color: black;
+}
+
+.hammer{
+    grid-area: hammer;
+    border-radius: 50%;
+    place-items: center;
+    display: grid;
+    font-size: 25px;
+    color: white;
+    border: 2px solid white;
+}
+
+.hammer:hover{
+    background:white;
+    color: black;
+}
+
+
+.main{
+    grid-area: main;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    
+}
+
+span{
+    display: inline-block;
+    font-size: 25px;
+    color: white;
+}
+
+span::before{
+    content: "";
+    background: white;
+    display: block;
+    height: 3px;
+}
+
+span::after{
+    content: "";
+    background: white;
+    display: block;
+    height: 3px;
+}
+
+.globe{
+    display: inline-block;
+    font-size: 25px;
+    color: whitesmoke;
+    animation: roll infinite alternate 4s 1s;
+}
+
+@keyframes roll{
+    0%{
+        transform: translate(0);
+    }100%{
+        transform: translate(300px) rotate(360deg);
+    }
+}
+
+
+.settings{
+    grid-area: settings;
+    border-radius: 50%;
+    place-items: center;
+    display: grid;
+    font-size: 25px;
+    color: white;
+    border: 2px solid white;
+}
+
+.settings:hover{
+    background:white;
+    color: black;
+}
+
+.homepage{
+    grid-area: homepage;
+    border-radius: 50%;
+    font-size: 25px;
+    color: white;
+    place-items: center;
+    display: grid;
+    border: 2px solid white;
+}
+
+.homepage:hover{
+    background:white;
+    color: black;
+}
+
+.content2{
+    grid-area: c2;
+    border: 3px solid black;
+    border-radius: 5px;
+    background-image: url(constr.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    font-size: 15px;
+}
+
+.content2::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100.3%;
+    width: 100.3%;
+    background-color: black;
+    opacity: .7;
+    z-index: -1;
+}
+
+.contact{
+    width: 50%;
+    height: 50%;
+    margin: 0 30px 30px ;
+}
+
+h2::after{
+    content: "";
+    position: relative;
+    display: block;
+    background-color: black;
+    height: 4px;
+    top: 5px;
+    width: 95%;
+}
+
+.link{
+    text-decoration: none;
+    background-color: black;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    position: relative;
+    top: 10px;
+}
+
+.content3{
+    grid-area: c3;
+    border: 3px solid black;
+    border-radius: 5px;
+    background-image: url(ceb.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    font-size: 15px;
+}
+
+.content3::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100.3%;
+    width: 100.3%;
+    background-color: black;
+    opacity: .7;
+    z-index: -1;
+}
+.contact{
+    width: 50%;
+    height: 50%;
+    margin: 0 30px 30px ;
+    position: relative;
+    top: -30px;
+}
+
+h2::after{
+    content: "";
+    position: relative;
+    display: block;
+    background-color: black;
+    height: 4px;
+    top: 5px;
+    width: 95%;
+}
+
+.link{
+    text-decoration: none;
+    background-color: black;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    position: relative;
+    top: 10px;
+}
+
+.content4{
+    grid-area: c4;
+    border: 3px solid black;
+    border-radius: 5px;
+    background-image: url(cebb.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    font-size: 15px;
+}
+
+.content4::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100.4%;
+    width: 100.3%;
+    background-color: black;
+    opacity: .7;
+    z-index: -1;
+}
+.contact{
+    width: 50%;
+    height: 50%;
+    margin: 0 30px 30px ;
+    position: relative;
+    top: -30px;
+}
+
+h2::after{
+    content: "";
+    position: relative;
+    display: block;
+    background-color: black;
+    height: 4px;
+    top: 5px;
+    width: 95%;
+}
+
+.link{
+    text-decoration: none;
+    background-color: black;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    position: relative;
+    top: 10px;
+}
